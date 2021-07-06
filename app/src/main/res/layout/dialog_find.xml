@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Status" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textSize="30dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="192dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/alive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alive" />
+
+        <RadioButton
+            android:id="@+id/dead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dead" />
+
+        <RadioButton
+            android:id="@+id/unknown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unknown" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="192dp"
+        android:layout_height="201dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+        <RadioButton
+            android:id="@+id/genderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Genderless" />
+
+        <RadioButton
+            android:id="@+id/unknownGen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unknown" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
