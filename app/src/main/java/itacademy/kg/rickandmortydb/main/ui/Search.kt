@@ -168,11 +168,11 @@ class Search : Fragment(), OnMovieClickListener, AdapterForEp.OnEpListener,
         dialog.setView(view)
         dialog.setPositiveButton("Choose params") { _, _ ->
 
-            if (!view.findViewById<EditText>(R.id.type_dialogue)
-                    .equals("") && !view.findViewById<EditText>(R.id.dimension_dialogue).equals("")
+            if (!view.findViewById<EditText>(R.id.type_dialogue).text
+                    .equals("") && !view.findViewById<EditText>(R.id.dimension_dialogue).text.equals("")
             ) {
-                type = view.findViewById<EditText>(R.id.type_dialogue).toString()
-                dimension = view.findViewById<EditText>(R.id.dimension_dialogue).toString()
+                type = view.findViewById<EditText>(R.id.type_dialogue).text.toString()
+                dimension = view.findViewById<EditText>(R.id.dimension_dialogue).text.toString()
 
             }
 
@@ -233,14 +233,12 @@ class Search : Fragment(), OnMovieClickListener, AdapterForEp.OnEpListener,
                 if (binding.searchText.toString()
                         .isNotEmpty() && gender.isNotEmpty() && status.isNotEmpty()
                 ) {
-                    Log.i("MyB", binding.searchText.text.toString()+gender.toString()+status.toString())
                     viewModel.findCharacter(binding.searchText.text.toString(), gender, status)
                 }
             } else if (selectedItemSt == "Locations") {
-                if (binding.searchText.toString()
+                if (binding.searchText.text.toString()
                         .isNotEmpty() && type.isNotEmpty() && dimension.isNotEmpty()
                 ) {
-
                     viewModel.findLocations(binding.searchText.text.toString(), type, dimension)
                 }
 
